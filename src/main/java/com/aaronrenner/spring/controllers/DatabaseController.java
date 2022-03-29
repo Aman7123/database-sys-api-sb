@@ -31,7 +31,7 @@ public class DatabaseController {
 	}
 	
 	public boolean isForbidden(String databaseName) {
-		String[] forbiddenTables = {"mysql", "sys", "information_schema", "keycloak", "sonar"};
+		String[] forbiddenTables = {"mysql", "sys", "information_schema", "keycloak", "sonar", "keys"};
 		boolean isForbidden = false;
 		for(String forbiddenWord : forbiddenTables) {
 			if(forbiddenWord.equalsIgnoreCase(databaseName)) isForbidden = true;
