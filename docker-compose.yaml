@@ -4,6 +4,9 @@ services:
     container_name: database-sys-api-sb-prod
     image: bananaztech/database-sys-api-sb:latest
     restart: always
+    environment:
+      SPRING_DATASOURCE_USERNAME: USERNAME
+      SPRING_DATASOURCE_PASSWORD: PASSWORD
     ports:
       - "8091:8080"
       - "8007:9000"
