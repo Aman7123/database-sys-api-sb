@@ -14,7 +14,7 @@ public class DatabaseController {
 	DatabaseService dbService;
 
 	private final String CONTENT_TYPE = "application/json";
-	private final String BASE_PATH = "/";
+	private final String BASE_PATH = "";
 	private final String DATABASE_PATH = "/{databaseName}";
 	private final String TABLE_PATH = "/{tableName}";
 	
