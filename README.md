@@ -1,51 +1,43 @@
-# Database Sys Api
-* Description: An API made in Springboot
-* Version: (Check main for release or develop for dev)
+### database-sys-api-sb
+* Version: 1.0.0
+* Most up to date implementation will be found in branch `develop`.
 * Creator: Aaron Renner
+* This API project was created in Spring-Boot
 
-### Table of Contents
-* [Introduction](#introduction)
-* Setup *"How to"*
-  * [Run Spring-Boot](#running-the-project)
-  
-## Introduction
+### Introduction
+This RESTful API provides database resources. This API is fully dynamic meaning it was ideally designed to not need any secific MySQL formatting, just plug-and-play!
 
-This Java application is built on the Spring-Boot framework!
+### Documentation
+* See the Swagger OpenAPI Specification: `https://app.swaggerhub.com/apis-docs/ARTechnology/database-sys-api/1.0.0`
+* Postman collection and environment variables in `src/test/resources/postman`
 
-## Setup
-### Properties
-The following document formatting MUST REMAIN THE SAME, replace or add only where noted to!
-Tips:
+### Getting Started
+**Running Locally using IDE**
+This project uses Spring profiles, and corresponding application properties .yaml files.
+All values from the application properties can be overwritten by the environment!
+* Use the following environment variables: 
+   * ```spring.profiles.active=<env>```
+   
+The profiles active environment variable is for selecting active config values. This project has a dev and prod but credentials are hidden!
 
-### Running PROD
-Setup the `SPRING_APPLICATION_JSON` value in the Docker-Compose. See example docker-compose.yaml in this project.
+Note: IDE specific development
+* Eclipse - When modifying this API in Eclipse the VM arguments added to the runtime configuration will be prefixed with `-D`.
+  * Example: `-Dspring.profiles.active=dev`
 
-### Running the Project
-
-Executing the project can be done in two ways, the first is by initializing using Maven which the second produces a traditional Jar file. Before attempting to run the program some setup must be done inside of the [src/main/resources/application.properties](src/main/resources/application.yml), you can follow the guides.
-
-### Build with Maven
-
-If you have Maven installed on your machine you can navigate to the root project directory with this README file and execute the following. Remember to follow the above Database setup procedures first.
-```sh
-mvn -B -DskipTests clean package
+**Running on the Command Line**
+The command arguments in a terminal also follow the prefix `-D` rule.
 ```
-You can also use the built in Maven wrapper and execute the project by following this command.
-```sh
-./mvnw -B -DskipTests clean package
+mvn spring-boot:run -Dspring-boot.run.arguments="--spring.profiles.active=dev"
 ```
-### Setting up in IDE
 
-Download Lombok to your IDE or VS Code Extension!
+### Docker & Compose & Maven
+This project includes a lightweight, portable maven executable that can be used in place of having maven installed.
+You will still need Java installed.
 
-Use the IDE "Run Configuration" to setup the `-Dspring.application.json` (eclipse example) in the Environment Properties
+When building this application for production I have included the Dockerfile that can allow for building, preparing
+and executing all source code in the base directory. Using CI/CD this can all be automated and I will try to include
+an example for using Github workflows.
 
-### Creating a Docker Image
+### Contact
 
-To build a container that can execute the application from a safe location you can use my supplied [Dockerfile](Dockerfile) to do so. You should follow the guides first to better understand some of these arguments.
-
-```Dockerfile
-CMD [ "java", \
-        "-jar", \
-        "discord-nft-bot.jar"]
-```
+* Aaron Renner (admin@aaronrenner.com)
