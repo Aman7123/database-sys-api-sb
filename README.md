@@ -1,5 +1,5 @@
 ### database-sys-api-sb
-* Version: 1.0.0
+* Version: 1.2.1
 * Most up to date implementation will be found in branch `develop`.
 * Creator: Aaron Renner
 * This API project was created in Spring-Boot

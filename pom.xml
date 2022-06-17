@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.aaronrenner</groupId>
 	<artifactId>database-sys-api-sb</artifactId>
-	<version>1.2.0</version>
+	<version>1.2.1</version>
 	<name>database-sys-api-sb</name>
 	<description>An API made with Spring-Boot</description>
 	<properties>
